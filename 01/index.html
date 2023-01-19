@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dev Challenge 01</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .container { padding-top: 20px;}
+        .bb1 { margin-left: 20px; width: 150px; }
+        .bb2 { margin-left: 20px; width: 150px; }
+        .bb3 { margin-left: 20px; width: 150px; }
+        .bb4 { margin-left: 20px; width: 150px; }
+        .bb5 { margin-left: 20px; width: 150px; }
+        .bb6 { margin-left: 20px; width: 100%; }
+
+        h1 { margin-bottom: 20px;}
+
+        .btn {
+            white-space:normal !important;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Dev Challenge 01</h1>
+    <span>
+        In this challenge, counters are going up. Love is going up.
+        Things are happening. Look at the source code and see if you can simplify the code.<br/><br/>
+        Any change in the code should not change the functionality AND the design of the page.</br><br/>
+    </span>
+
+    <b>Counter 1:</b> <a id="counter1" class="btn bb1 btn-primary">0</a><br/><br/>
+    <b>Counter 2:</b> <a id="counter2" class="btn bb2 btn-success">0</a><br/><br/>
+    <b>Counter 3:</b> <a id="counter3" class="btn bb3 btn-danger">0</a><br/><br/>
+    <b>Counter 4:</b> <a id="counter4" class="btn bb4 btn-warning">0</a><br/><br/>
+    <b>Counter 5:</b> <a id="counter5" class="btn bb5 btn-info">0</a><br/><br/><br/>
+    <b>Heart Counter:</b><br/><br/><a id="counter-heart" class="btn bb6 btn-info">&nbsp;</a>
+</div>
+<script>
+    setInterval(function() {
+        var elem = document.querySelector('#counter1');
+        var counter1 = elem.innerHTML;
+
+        if(counter1 >= 5) {
+            counter1 = 0;
+            var elemHeart = document.querySelector('#counter-heart');
+            elemHeart.innerHTML += "❤&nbsp;";
+        }
+
+        elem.innerHTML = parseInt(counter1) + 1;
+
+        var elem = document.querySelector('#counter2');
+        var counter2 = elem.innerHTML;
+
+        if(counter2 >= 50) {
+            counter2 = 0;
+            var elemHeart = document.querySelector('#counter-heart');
+            elemHeart.innerHTML += "❤&nbsp;";
+        }
+
+        elem.innerHTML = parseInt(counter2) + 10;
+
+        var elem = document.querySelector('#counter3');
+        var counter3 = elem.innerHTML;
+        if(counter3 >= 500) {
+            counter3 = 0;
+            var elemHeart = document.querySelector('#counter-heart');
+            elemHeart.innerHTML += "❤&nbsp;";
+        }
+        elem.innerHTML = parseInt(counter3) + 100;
+
+        var elem = document.querySelector('#counter4');
+        var counter4 = elem.innerHTML;
+        if(counter4 >= 5000) {
+            counter4 = 0;
+            var elemHeart = document.querySelector('#counter-heart');
+            elemHeart.innerHTML += "❤&nbsp;";
+        }
+        elem.innerHTML = parseInt(counter4) + 1000;
+
+        var elem = document.querySelector('#counter5');
+        var counter5 = elem.innerHTML;
+        if(counter5 >= 50000) {
+            counter5 = 0;
+            var elemHeart = document.querySelector('#counter-heart');
+            elemHeart.innerHTML += "❤&nbsp;";
+        }
+        elem.innerHTML = parseInt(counter5) + 10000;
+
+        var elem = document.querySelector('#counter-heart');
+        var counterHeart = elem.innerHTML;
+        if(counterHeart.trim().length >= 1500) {
+            elem.innerHTML = "&nbsp;";
+        }
+
+    }, 50);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
