@@ -37,11 +37,11 @@
 <div class="container">
     <h1>Dev Challenge 02</h1>
     <span>
-        In this challenge, you will have to make some changes. For now, the emoji can turn happy anytime as long as you hover the button.<br/><br/>
+        In this challenge, you will have to make some changes. For now, the emoji can turn happy anytime as long as you hover it.<br/><br/>
         You will need to do the following changes:
         <ul>
             <li>Initial behavior/display should remain the same from 0 to 30.</li>
-            <li>After the counter reaches 30, the hover button should not work anymore.</li>
+            <li>After the counter reaches 30, the hover functionality should not work anymore.</li>
             <li>When the counter reaches 30, your emoji should be sad all the times.</li>
             <li>When the counter reaches 60, your emoji should be happy all the times.</li>
             <li>When the counter reaches 100, your emoji should disappear.</li>
@@ -53,9 +53,7 @@
 
     <b>Age Counter:</b> <a id="counter1" class="btn bb1 btn-primary">0</a><br/><br/>
 
-    <b>Make him happy:</b> <a class="btn bb1 btn-success" onmouseover="happy();" onmouseout="sad();">Hover me!</a><br/><br/>
-
-    <div id="your_emoji">
+    <div id="your_emoji" onmouseover="happy();" onmouseout="sad();">
         <div id="sad_emoji">😭</div>
         <div id="happy_emoji">😊</div>
     </div>
