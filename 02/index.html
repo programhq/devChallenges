@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dev Challenge 02</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .container { padding-top: 20px;}
+        .bb1 { margin-left: 20px; width: 150px; }
+
+        h1 { margin-bottom: 20px;}
+
+        .btn {
+            white-space:normal !important;
+            word-wrap: break-word;
+        }
+        #sad_emoji, #happy_emoji {
+            font-size: 100px;
+        }
+
+        #happy_emoji {
+            display: none;
+        }
+
+        #your_emoji {
+            margin-top: 50px;
+            background-color: #80b2e7;
+            text-align:center;
+            border-radius: 30px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Dev Challenge 02</h1>
+    <span>
+        In this challenge, you will have to make some changes. For now, the emoji can turn happy anytime as long as you hover the button.<br/><br/>
+        You will need to do the following changes:
+        <ul>
+            <li>Initial behavior/display should remain the same from 0 to 30.</li>
+            <li>After the counter reaches 30, the hover button should not work anymore.</li>
+            <li>When the counter reaches 30, your emoji should be sad all the times.</li>
+            <li>When the counter reaches 60, your emoji should be happy all the times.</li>
+            <li>When the counter reaches 100, your emoji should disappear.</li>
+            <li>When the counter resets at 0, initial behavior/display should return.</li>
+        </ul>
+        <br/>
+        You can ONLY do changes in the script part of this file.<br/><br/><br/>
+    </span>
+
+    <b>Age Counter:</b> <a id="counter1" class="btn bb1 btn-primary">0</a><br/><br/>
+
+    <b>Make him happy:</b> <a class="btn bb1 btn-success" onmouseover="happy();" onmouseout="sad();">Hover me!</a><br/><br/>
+
+    <div id="your_emoji">
+        <div id="sad_emoji">😭</div>
+        <div id="happy_emoji">😊</div>
+    </div>
+
+</div>
+<script>
+    setInterval(function() {
+        var elem = document.querySelector('#counter1');
+        var counter1 = elem.innerHTML;
+        elem.innerHTML = parseInt(counter1) + 1;
+
+        if(counter1 >= 120) {
+            elem.innerHTML = 0;
+        }
+
+    }, 100);
+
+    function happy() {
+        document.getElementById('sad_emoji').style.display = 'none';
+        document.getElementById('happy_emoji').style.display = 'block';
+    }
+
+    function sad() {
+        document.getElementById('happy_emoji').style.display = 'none';
+        document.getElementById('sad_emoji').style.display = 'block';
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
