@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dev Challenge 06</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container { padding-top: 20px;}
+
+        h1 { margin-bottom: 20px;}
+
+        #description_container {
+            margin-bottom: 30px;
+        }
+
+        #player {
+            padding: 40px;
+            background-color: #dff3ff;
+            width: 200px;
+            border-radius: 22px;
+            border: 1px solid #4f6ea9;
+            text-align: center;
+        }
+
+        #all-time {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Dev Challenge 06</h1>
+
+    <span id="description_container">
+        In this challenge, you will have to implement an HTML5 audio player that is controlled with Javascript with two buttons, Play & Stop.<br/>
+        You should also implement the elapsed/total time of the played element. You can ONLY do changes in the script part of this file.
+    </span>
+
+    <div style="clear:both">&nbsp;</div>
+
+    <div id="player">
+        <a id="click-play" class="btn btn-success"><i class="fa fa-play"></i></a>
+        <a id="click-stop" class="btn btn-danger"><i class="fa fa-stop"></i></a>
+        <div id="all-time">
+            <a id="elapsed-time">00:00</a> / <a id="total-time">00:00</a>
+        </div>
+    </div>
+
+    <div style="clear:both">&nbsp;</div>
+
+    <audio>
+        <source src="hello.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+<script>
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
